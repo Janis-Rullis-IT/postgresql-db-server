@@ -1,0 +1,13 @@
+environment
+setup-done
+*.yml
+*.conf
+*.log
+*.gz
+*.sql
+*.backup
+
+## db-data
+db-data/*
+!db-data/README.md
+

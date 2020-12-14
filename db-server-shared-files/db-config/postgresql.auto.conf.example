@@ -1,0 +1,2 @@
+# add [application_name] to auto generated auth file (any name you like, like hostname and so on)
+# primary_conninfo = 'user=FILL_THIS password=FILL_THIS host=FILL_THIS port=5432 sslmode=prefer sslcompression=0 gssencmode=prefer krbsrvname=postgres target_session_attrs=any application_name=node01'

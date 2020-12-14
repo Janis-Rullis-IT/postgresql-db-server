@@ -1,0 +1,23 @@
+version: '3.6'
+services:    
+    pg-1:
+        container_name: pg-1
+        build:
+            context: ./db-server-shared-files
+            dockerfile: Dockerfile
+        restart: unless-stopped
+        volumes:
+            - './db-server-shared-files:/var/www:rw'
+        environment:
+            POSTGRES_USER: $DB_USER
+            POSTGRES_PASSWORD: $DB_PASSWORD
+            POSTGRES_DB: $DB_NAME
+        networks:
+            pg-net:
+                ipv4_address: 172.72.4.1
+networks:
+    pg-net:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.72.0.0/16
